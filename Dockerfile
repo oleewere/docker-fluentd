@@ -4,7 +4,7 @@ MAINTAINER Oliver Szabo <oleewere@gmail.com>
 EXPOSE 24284
 
 ENV APPS_TO_INSTALL make gcc g++ libc-dev ruby-dev zlib1g-dev libz-dev git
-ENV FLUENTD_PLUGINS_TO_INSTALL fluent-plugin-multiline-parser fluent-plugin-webhdfs fluent-plugin-s3 fluent-plugin-azurestorage fluent-plugin-gcs
+ENV FLUENTD_PLUGINS_TO_INSTALL fluent-plugin-detect-exceptions fluent-plugin-multiline-parser fluent-plugin-webhdfs fluent-plugin-s3 fluent-plugin-azurestorage fluent-plugin-gcs
 
 RUN apt-get update && apt-get install -y --no-install-recommends $APPS_TO_INSTALL
 RUN gem install $FLUENTD_PLUGINS_TO_INSTALL
